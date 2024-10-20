@@ -1,0 +1,191 @@
+.welcome-screen {
+  background-color: #9d5b2d; /* Background for whole welcome screen, WE CAN CHANGE */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  position: relative;
+  overflow: hidden;
+}
+
+.stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../../assets/WelcomeScreen/stars.png') repeat;
+  z-index: 0; 
+  animation: move-stars 30s linear infinite;
+  opacity: 0.5;
+}
+
+/* Moving stars animation */
+@keyframes move-stars {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100vw, -100vh);
+  }
+}
+
+.phone-tablet-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%; 
+  max-width: 1200px;
+  margin-top: 20px;
+  z-index: 1; /* Ensure it's above the stars */
+}
+
+.phone {
+  position: relative;
+  width: 25%; 
+  max-width: 250px; 
+  height: auto;
+  overflow: hidden; /* Ensure the clothes don't extend beyond the phone frame */
+  z-index: 1; /* Ensure it's above the stars */
+}
+
+.phone-frame {
+  width: 100%; 
+  height: auto;
+}
+
+.clothes-image {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35%; /* This changes the sizing of the clothes */
+  height: auto;
+  animation: swipe-clothes 6s ease-in-out infinite; /* swipe animation */
+}
+
+@keyframes swipe-clothes {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(50%); 
+  }
+  10%, 90% {
+    opacity: 1;
+    transform: translateX(-50%); 
+  }
+}
+
+.tablet-container {
+  position: relative;
+  width: 50%; 
+  max-width: 700px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden;
+}
+
+.tablet {
+  width: 100%; 
+  border-radius: 50px; 
+  background-color: #333; 
+  height: auto;
+  border: 3px solid #ffffff; 
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); 
+  overflow: hidden; 
+  position: relative;
+}
+
+.welcome-text {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem; 
+  color: white;
+  text-align: center;
+  font-family: 'Orelago One', sans-serif;
+  cursor: pointer;
+  transition: font-size 0.3s ease; /* transition for the font size */
+}
+
+/* Expand the text when hovered */
+.welcome-text:hover {
+  font-size: 4rem; 
+}
+
+/* Responsive font size for larger screens - Ensures accurate sizing for any screen resolutions */
+@media (min-width: 768px) {
+  .welcome-text {
+    font-size: 2.5rem;
+  }
+
+  .welcome-text:hover {
+    font-size: 5rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .welcome-text {
+    font-size: 3rem;
+  }
+
+  .welcome-text:hover {
+    font-size: 3.5rem; 
+  }
+}
+
+.hanger-container {
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 10px;
+  z-index: 2; /* Ensures hangers are above the phones and tablet */
+}
+
+.hanger {
+  width: 120px;
+  animation: drop-hanger 2s ease forwards, swing-hanger 2s 2s infinite ease-in-out;
+}
+
+.white-hanger {
+  filter: brightness(0) invert(1); /* Make the hanger white */
+  animation: drop-hanger 2s ease forwards, swing-hanger 2s 2s infinite ease-in-out;
+}
+
+/* Drop animation for all hangers */
+@keyframes drop-hanger {
+  from {
+    top: -150px;
+    opacity: 0;
+  }
+  to {
+    top: 100px;
+    opacity: 1;
+  }
+}
+
+/* Swing animation for all hangers */
+@keyframes swing-hanger {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+} 
