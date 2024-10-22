@@ -1,0 +1,205 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  
+  /* Animated gradient background - We can change the color if needed! */
+  background: linear-gradient(270deg, #ff9a9e, #fad0c4, #ffdde1);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+.homepage-content {
+  flex-grow: 1; 
+}
+
+.footer {
+  background-color: #f8f8f8;
+  border: 2px solid #e7dbdbb8;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  bottom: 0;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 80vw; 
+  max-width: 1200px; 
+  margin: 0 auto; /* Center the container */
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.daily {
+  margin-left: 90px; 
+  position: relative;
+}
+
+.closet {
+  text-align: center; 
+  position: relative;
+}
+
+.favs {
+  margin-right: 100px; 
+  position: relative;
+}
+
+
+.daily::after, .closet::after, .favs::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2.5px;
+  background-color: #000;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px; 
+  flex-grow: 1;
+  width: 100%;
+  margin-left: 90px;
+}
+
+.avatar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 150px; 
+}
+
+.avatar img {
+  max-width: 100%; 
+  height: auto;
+}
+
+.closet-display {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: -50px;
+}
+
+.closet-frame {
+  width: 250px;
+  height: 400px;
+  background-color: #66360677;
+  border: 5px solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.closet-top {
+  height: 50px;
+  background-color: #6636067d;
+  border-bottom: 2px solid black;
+}
+
+.closet-doors {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  padding: 10px;
+}
+
+.closet-door {
+  width: 45%;
+  height: 90%;
+  background-color: #66360698;
+  border: 2px solid rgb(187, 150, 150);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.left-door::after, .right-door::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: rgb(49, 25, 25);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left-door::after {
+  left: 10px;
+}
+
+.right-door::after {
+  right: 10px;
+}
+
+.inspo {
+  flex: 1;
+  padding-left: 10px; 
+  margin-right: 90px;
+  
+}
+
+.inspo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  
+}
+
+.inspo-item {
+  width: 150px; 
+  height: 150px;
+  background-color: lightgray;
+  border: 1px solid #000;
+  border: 5px solid #8B4513; 
+  border-radius: 10px; 
+  box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.1); 
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+

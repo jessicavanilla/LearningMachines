@@ -1,0 +1,123 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border: 2px solid #e7dbdbb8;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-left: -20px;
+}
+  
+.footer-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+  
+/* Default pie chart circle style */
+.footer-item.pie-chart .circle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #c1b1b1;
+    border: 1px solid rgb(163, 130, 130);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-chart .circle:hover {
+    background-color: rgba(167, 154, 154, 0.557);
+    transform: scale(1.1); 
+}
+
+  
+.pie-chart .line {
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: #000;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+  
+.pie-chart .line-right {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    top: 30px;
+    left: 50%;
+}
+  
+.add-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.add-icon-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #453c3c;
+    border: 1px solid #312a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.add-icon-container:hover {
+    background-color: #5c4a4a;
+    transform: scale(1.1); /* Scale the plus icon slightly on hover */
+}
+
+.add-icon {
+    font-size: 40px;
+    margin-top: -6px;
+    font-weight: bold;
+}
+  
+.profile-pic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.profile-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #e2dada;
+    border: 1px solid #b0acac68;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-circle:hover {
+    background-color: #cabfbf8e;
+    transform: scale(1.1); 
+}
+
+  
+.profile-image {
+    width: 80%;
+    height: 80%;
+    object-fit: contain; 
+    border-radius: 50%; 
+}
+  
