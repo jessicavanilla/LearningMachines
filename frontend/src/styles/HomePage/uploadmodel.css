@@ -60,13 +60,13 @@ p {
 }
 
 .option:hover p {
-  color: #007bff; /* Change the text color on hover */
+  color: #007bff; 
 }
 
 .submit-container {
   margin-top: 20px;
   display: flex;
-  justify-content: space-around; /* Space out the buttons */
+  justify-content: space-around; 
 }
 
 .submit-button, .change-image-button {

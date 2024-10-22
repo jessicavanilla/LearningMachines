@@ -17,9 +17,6 @@
     align-items: center;
 }
   
-
-  
-/* Default pie chart circle style */
 .footer-item.pie-chart .circle {
     position: relative;
     width: 60px;
@@ -37,7 +34,6 @@
     transform: scale(1.1); 
 }
 
-  
 .pie-chart .line {
     position: absolute;
     width: 2px;
@@ -80,7 +76,7 @@
 
 .add-icon-container:hover {
     background-color: #5c4a4a;
-    transform: scale(1.1); /* Scale the plus icon slightly on hover */
+    transform: scale(1.1); 
 }
 
 .add-icon {

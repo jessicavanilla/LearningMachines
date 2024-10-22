@@ -5,7 +5,7 @@ const UploadModal = ({ isVisible, onClose, onSubmit }) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [cameraActive, setCameraActive] = useState(false);
 
-  // Function to handle file selection for image upload
+  // handle file selection for image upload
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
@@ -35,16 +35,14 @@ const UploadModal = ({ isVisible, onClose, onSubmit }) => {
     setCameraActive(false);
   };
 
-  // Function to handle the submit button click
   const handleSubmit = () => {
     if (selectedImage) {
-      // Pass the selected image back to the parent component or store it for later use
       onSubmit(selectedImage);
-      onClose(); // Close the modal after submission
+      onClose(); 
     }
   };
 
-  if (!isVisible) return null; // Do not render the modal if it's not visible
+  if (!isVisible) return null; 
 
   return (
     <div className="modal-overlay">

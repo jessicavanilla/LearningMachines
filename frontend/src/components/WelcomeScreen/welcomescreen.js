@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';  // Import hook for navigation
+import { useNavigate } from 'react-router-dom';  
 import '../../styles/WelcomeScreen/welcomescreen.css';
 import hangerImage from '../../assets/WelcomeScreen/hanger.png';
 import tabletImage from '../../assets/WelcomeScreen/tablet.png';

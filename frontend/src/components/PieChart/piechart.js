@@ -1,26 +1,25 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import Footer from '../Footer/footer'; // Reuse the Footer component
-import '../../styles/PieChart/piechart.css'; // Add your styles
+import { useNavigate } from 'react-router-dom'; 
+import Footer from '../Footer/footer'; 
+import '../../styles/PieChart/piechart.css'; 
 
 const PieChart = () => {
-  const navigate = useNavigate(); // Initialize useNavigate
+  const navigate = useNavigate();
 
   const handleMiniBoxClick = () => {
-    navigate('/homepage'); // Navigate back to homepage
+    navigate('/homepage'); 
   };
 
   return (
     <div className="clothes-chart-page-container">
       <div className="circle-container">
         <div className="big-circle">
-          {/* Placeholder for future pie chart */}
         </div>
         <div className="mini-box" onClick={handleMiniBoxClick}>
           Back to Homepage
         </div>
       </div>
-      <Footer /> {/* Keep the footer with the darkened pie chart */}
+      <Footer /> 
     </div>
   );
 };

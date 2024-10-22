@@ -52,7 +52,7 @@ const Footer = ({ applyPieChartStyles }) => {
         </div>
       </footer>
 
-      {/* Use Suspense to lazy load the modals */}
+      {/*  lazy load the modals -> to prevent a buffering screen */}
       <Suspense fallback={<div>Loading...</div>}>
         {isModalVisible && <UploadModal isVisible={isModalVisible} onClose={toggleModal} />}
         {isProfileModalVisible && <ProfileModal isVisible={isProfileModalVisible} onClose={toggleProfileModal} />}

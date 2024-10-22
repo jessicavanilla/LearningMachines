@@ -6,29 +6,24 @@ const LoginSignupScreen = () => {
   const [isLogin, setIsLogin] = useState(true); // Toggle between login and signup
   const navigate = useNavigate();
 
-  // Handler for form submission (just simulates navigation)
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); 
 
     if (!isLogin) {
-      // Simulate account creation and redirect to login page
-      console.log('Account created successfully! Redirecting to login...');
-      setIsLogin(true); // Simulate switching back to login mode
-      navigate('/loginsignup'); // Redirect to the login page
+      setIsLogin(true); //  switching back to login mode
+      navigate('/loginsignup'); 
     } else {
-      // Simulate login and redirect to homepage
-      console.log('Login successful! Redirecting to homepage...');
-      navigate('/homepage'); // Redirect to the homepage
+      navigate('/homepage'); 
     }
   };
 
   const handleToggle = () => {
-    setIsLogin(!isLogin); // Toggle between login and signup
+    setIsLogin(!isLogin); 
   };
 
   return (
     <div className="login-signup-container">
-      <div className="stars-background"></div> {/* Star background effect */}
+      <div className="stars-background"></div> 
       
       <div className="form-container">
         <h1>{isLogin ? 'Login' : 'Create an Account'}</h1>
