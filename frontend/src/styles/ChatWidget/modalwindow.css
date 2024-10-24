@@ -1,0 +1,66 @@
+.chat-modal-window {
+    position: absolute;
+    bottom: 310px;
+    /* justify-content: space-around; */
+    display: flex;
+    width: 370px;
+    padding: 7px 18px;
+    height: 65vh;
+    max-width: calc(100% - 48px);
+    max-height: 470px;
+    background-color: white;
+    border-radius: 12px;
+    border: 2px solid #ee6e46;
+    overflow: hidden;
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.33);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.chat-output-container{
+    position: relative;
+    align-self: flex-start;
+    /* justify-content: space-between; */
+}
+
+.chat-modal-text-output{
+    position: absolute;
+    align-self: flex-start;
+    flex-grow: 1;
+    overflow-y: auto;
+    resize: none;
+    margin-bottom: 10px;
+    height: 400px;
+    width: 300px;;
+}
+
+.chat-input-container {
+    display: flex;
+    align-items: flex-end;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    width: 100%;
+}
+
+.chat-modal-text-input {
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+  
+.chat-modal-submit-button {
+    background-color: #ee6e46; /* Replace with your primary color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+}
+  
+.chat-modal-submit-button:hover {
+    background-color: #e98566;
+}
+  

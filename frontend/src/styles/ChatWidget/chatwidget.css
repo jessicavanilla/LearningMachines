@@ -1,0 +1,30 @@
+.chat-widget {
+    position: relative;
+    bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: #ee6e46;
+    width: 70px;
+    padding: 7px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.chat-widget.hovered {
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 10px 6px rgba(142, 135, 135, 0.33);
+}
+  
+.chat-widget-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.chat-widget-text {
+    color: white;
+    font-size: 15px;
+    margin-left: 5px;
+}
+  

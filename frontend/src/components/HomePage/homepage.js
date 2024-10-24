@@ -2,6 +2,7 @@ import React from 'react';
 import '../../styles/HomePage/homepage.css';
 import mascot from '../../assets/HomePage/mascot.png';
 import Footer from '../../components/Footer/footer'; 
+import ChatWidget from '../ChatWidget/chatwidget';
 
 const Homepage = () => {
   return (
@@ -41,7 +42,7 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-
+      <ChatWidget />
       <Footer />
       </div>
     </div>
