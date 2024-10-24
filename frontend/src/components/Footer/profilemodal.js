@@ -1,13 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../../styles/Footer/profilemodal.css'; 
 
-const ProfileModal = ({ isVisible, onClose }) => {
-  const [name, setName] = useState('John Doe'); // HARD coded for now
-  const [email, setEmail] = useState('johndoe@example.com');
-  const [password, setPassword] = useState('password123'); // This will be hidden
+const ProfileModal = ({ isVisible, onClose, userData }) => {
+  const [email, setEmail] = useState(userData ? userData.email : '');
+  const [password, setPassword] = useState(''); 
+
+  useEffect(() => {
+    if (userData) {
+      setEmail(userData.email);
+    }
+  }, [userData]);
 
   const handleApplyChanges = () => {
-    alert('Changes applied successfully!');
+    alert('Changes applied successfully!'); 
     onClose(); 
   };
 
@@ -22,15 +27,6 @@ const ProfileModal = ({ isVisible, onClose }) => {
       <div className="profile-modal">
         <h2>Profile Information</h2>
         <form className="profile-form">
-          <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-          </div>
           <div className="form-group">
             <label htmlFor="email">Email</label>
             <input

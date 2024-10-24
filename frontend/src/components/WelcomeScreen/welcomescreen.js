@@ -70,7 +70,7 @@ const WelcomeScreen = () => {
             className={`welcome-text ${isTabletClicked ? 'text-expanded' : ''}`} 
             onClick={handleTextClick} 
           >
-            Welcome to [INSERT NAME]
+            Welcome to Bijou
           </h1>
         </div>
         

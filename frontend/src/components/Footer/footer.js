@@ -9,6 +9,7 @@ const ProfileModal = React.lazy(() => import('./profilemodal'));
 const Footer = ({ applyPieChartStyles }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [isProfileModalVisible, setIsProfileModalVisible] = useState(false);
+  const [userData, setUserData] = useState(null); 
   const navigate = useNavigate();
 
   const toggleModal = () => {
@@ -23,13 +24,33 @@ const Footer = ({ applyPieChartStyles }) => {
     navigate('/piechart');
   };
 
+  const fetchUserProfile = async () => {
+    try {
+        const token = localStorage.getItem('authToken'); 
+        const response = await fetch('http://127.0.0.1:8000/api/users/profile/', {
+            method: 'GET',
+            headers: {
+                'Authorization': `Bearer ${token}`,
+                'Content-Type': 'application/json',
+            },
+        });
+        if (response.ok) {
+            const data = await response.json();
+            setUserData(data);
+            toggleProfileModal();
+        } else {
+            console.error('Failed to fetch user profile');
+        }
+    } catch (error) {
+        console.error('Error fetching user profile:', error);
+    }
+  };
+  
   return (
     <>
       <footer className="footer">
         <div
-          className={`footer-item pie-chart ${
-            applyPieChartStyles ? 'pie-chart-styled' : ''
-          }`}
+          className={`footer-item pie-chart ${applyPieChartStyles ? 'pie-chart-styled' : ''}`}
           onClick={handlePieChartClick}
         >
           <div className="circle">
@@ -45,17 +66,23 @@ const Footer = ({ applyPieChartStyles }) => {
           </div>
         </div>
 
-        <div className="footer-item profile-pic" onClick={toggleProfileModal}>
+        <div className="footer-item profile-pic" onClick={fetchUserProfile}>
           <div className="profile-circle">
             <img src={ProfilePic} alt="Profile" className="profile-image" />
           </div>
         </div>
       </footer>
 
-      {/*  lazy load the modals -> to prevent a buffering screen */}
+      {/* Lazy load the modals */}
       <Suspense fallback={<div>Loading...</div>}>
         {isModalVisible && <UploadModal isVisible={isModalVisible} onClose={toggleModal} />}
-        {isProfileModalVisible && <ProfileModal isVisible={isProfileModalVisible} onClose={toggleProfileModal} />}
+        {isProfileModalVisible && (
+          <ProfileModal
+            isVisible={isProfileModalVisible}
+            onClose={toggleProfileModal}
+            userData={userData}
+          />
+        )}
       </Suspense>
     </>
   );
