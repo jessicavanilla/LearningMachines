@@ -100,8 +100,9 @@
 }
 
 .avatar img {
-  max-width: 100%; 
+  max-width: 230%; 
   height: auto;
+  margin-top: 80px;
 }
 
 .closet-display {

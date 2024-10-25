@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../styles/HomePage/homepage.css';
-import mascot from '../../assets/HomePage/mascot.png';
+import mascot from '../../assets/HomePage/mascot2.png';
 import Footer from '../../components/Footer/footer'; 
 import ChatWidget from '../ChatWidget/chatwidget';
 
