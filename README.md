@@ -15,7 +15,7 @@ This is still a work in progress as a fun side project.
 
 ### Built With
 
-This web application is being built with React using HTML, CSS, Javascript, and Python for the backend. The database is being hosted on MonogDB.
+This web application is being built with React using HTML, CSS, Javascript, and Python for the backend. The database is being hosted on MongoDB.
 
 
 
@@ -33,9 +33,13 @@ Install these libraries before running the code.
   npm install react-scripts
   ```
 
+  ```sh
+  npm install react-icons
+  ```
+
 ### Running the Web Application
 
-After installing all the required packages, you will be able to run the case using:
+After installing all the required packages, you will be able to run the code using:
   ```sh
   npm start
   ```
